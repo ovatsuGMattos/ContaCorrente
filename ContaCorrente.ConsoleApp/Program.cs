@@ -4,20 +4,35 @@ namespace ContaCorrente.ConsoleApp
 {
     internal class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            //Saque: Permite a retirada de valores, respeitando o limite máximo permitido.
+            ContaCorrente conta1 = new ContaCorrente();
+            conta1.Saldo = 1000;
+            conta1.Numero = 12;
+            conta1.Limite = 0;
+            conta1.Movimentacoes = new Movimentacao[10];
 
-            //Depósito: Possibilita a adição de fundos à conta.
+            conta1.Sacar(200);
+            conta1.Depositar(300);
+            conta1.Depositar(500);
+            conta1.Sacar(200); 
 
-            //Consulta de saldo: Fornece informações atualizadas sobre o montante disponível.
+            ContaCorrente conta2 = new ContaCorrente();
+            conta2.Saldo = 300;
+            conta2.Numero = 13;
+            conta2.Limite = 0;
+            conta2.Movimentacoes = new Movimentacao[10];
 
-            //Emissão de extrato: Lista todas as movimentações realizadas em um período específico.
+            conta1.Transferir(conta2, 400);
 
-            //Transferência entre contas: Permite a movimentação de valores entre contas correntes distintas.
+            Console.Clear();
+
+            conta1.ExibirExtrato();
+            Console.WriteLine();
+            conta2.ExibirExtrato();
 
             Console.ReadLine();
-
         }
+        
     }
 }
