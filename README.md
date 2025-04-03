@@ -3,7 +3,7 @@
 		PROGRAMA CRIADO DURANTE A ACADEMIA DO PROGRAMADOR 2025
 ````
 
-![]()
+![](https://i.imgur.com/3buNTjR.gif)
 
 ## Tecnologias utilizadas
 
